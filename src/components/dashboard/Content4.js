@@ -6,6 +6,10 @@ import user from "../../images/user.png";
 import NavbarMenu from "../NavbarMenu";
 import Table2 from "./Table2";
 import CustomPagination from "./CustomPagination";
+import UsersTable2 from "./UsersTable2";
+import MyBookingsTable from "./MyBookingsTable";
+import VehicleSettingTable from "./VehicleSettingTable";
+import NoDataTable from "./NoDataTable";
 
 
 const Content4 = () => {
@@ -106,22 +110,32 @@ const Content4 = () => {
             <div style={{display:"flex",marginTop:"7vh",gap:"29vw"}}>
 
             <span style={{display:"flex",gap:"0.7vw"}}>
-             <span>Show</span>
+             <span style={{fontSize:"1vw"}}>Show</span>
               <span><input type="number" style={{width:"3vw",paddingLeft:"0.8vw"}}></input></span>
-             <span>entries</span>
+              <span style={{fontSize:"1vw"}}>entries</span>
             </span>
 
             <div className="searchicon" style={{position:"relative"} }>
-            <input type="text" placeholder="Search" style={{padding:"0.7vw",width:"18vw"}}></input>
+            <input type="text" placeholder="Search" style={{padding:"0.7vw",width:"18vw",height:"3vw"}}></input>
           <img src={searchicon} />
             </div>
             </div>
-            <Table2 />
+
+            {/* <Table2 /> */}
+
+            {/* <UsersTable2 /> */}
+
+            {/* <MyBookingsTable /> */}
+
+            {/* <VehicleSettingTable /> */}
+
+            <NoDataTable />
+
             <div style={{height:"2px",width:"100%",backgroundColor:"rgba(0, 0, 0, 0.5)",marginTop:"3vh"}}>
    
              </div>
              <div style={{display:"flex",gap:"25vw",marginTop:"5vh"}}>
-             <p style={{textAlign:"left"}}>Showing 1 to 3 of 3 entries</p>
+             <p style={{textAlign:"left",fontSize:"1vw"}}>Showing 1 to 3 of 3 entries</p>
              <CustomPagination className="custom-pagination"/>
              </div>
            </div>

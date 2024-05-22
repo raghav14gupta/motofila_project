@@ -611,7 +611,7 @@ a:visited {
 }
 .userDetailMainContainer_top-walletLeft{
   width: 23vw;
-  
+  height: 100%;
  
 }
 .userDetailMainContainer_top-walletRight{
@@ -625,7 +625,7 @@ a:visited {
 }
 .card-body {
   flex:none !important; 
-   padding:0px !important;
+   padding:8px !important;
   /* color: var(--bs-card-color); */
 }
 .userDetailMainContainer_top-walletLeft .card{
@@ -749,4 +749,57 @@ a:visited {
   position: relative;
   padding: 10px 16px !important;
   overflow-wrap: break-word;
+}
+
+
+
+/* users table2 */
+.table-responsive .table {
+  width: 59vw !important;
+}
+
+.badge-success{
+  background-color: rgba(4, 184, 87, 1);
+  color: rgba(255, 255, 255, 1);
+  padding: 5px 7px;
+  width: 80%;
+}
+.badge a, a:link, a:visited{
+  color: white;
+  font-weight: 500;
+}
+
+.badge-danger{
+  background-color:rgba(224, 68, 14, 1);
+  width: 80%;
+  padding: 5px 7px;
+}
+
+.table-dark {
+  --bs-table-color: rgba(0, 0, 0, 1);
+  --bs-table-bg:rgba(163, 163, 163, 0.4);
+  font-weight: 400;
+ 
+
+}
+
+.table-change th {
+  font-weight: 400 !important;
+  color: black;
+  border-bottom: none;
+  height: 8vh;
+ 
+}
+
+/* :where(.css-dev-only-do-not-override-1okl62o).ant-table-wrapper table {
+  width: 80vw;
+  
+} */
+.custom-table {
+  width: 59vw;  /* Adjust the width as needed */
+  margin-top: 18px;
+  border-radius: none;
+}
+.custom-table th{
+  border-radius: 0px !important;
 }

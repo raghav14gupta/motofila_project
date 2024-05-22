@@ -110,8 +110,7 @@ const Table1 = () => {
           columns={columns}
           dataSource={data}
           pagination={false}
-          className="responsive-table"
-          scroll={{ x: 'max-content' }} // Ensure horizontal scroll appears when necessary
+         // Ensure horizontal scroll appears when necessary
         />
       </div>
     </div>
