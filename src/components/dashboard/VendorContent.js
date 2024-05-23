@@ -18,6 +18,7 @@ const VendorContent = () => {
               fontWeight: "500",
               padding: "1vw 2vw",
               color: "rgba(0, 0, 0, 1)",
+              marginBottom:"8vh"
             }}
           >
             Vendors

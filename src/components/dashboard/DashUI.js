@@ -34,6 +34,9 @@ import Content2 from "./Contenttwo";
 import Content3 from "../dashboard/Content3";
 import Content4 from "./Content4";
 import VendorContent from "./VendorContent";
+import { ReportContainer } from "./ReportContainer";
+import BookingReport from "./BookingReport";
+import ParkingReport from "./ParkingReport";
 
 const { Header, Sider, Content: AntContent } = Layout;
 
@@ -112,7 +115,10 @@ const DashUI = () => {
               key: "6",
               icon: <img src={report} alt="report" />,
               label: <Link to="/report">Report</Link>,
-              children: [{ label: "option1" }],
+              children: [{ label:<Link to="/User-Reports"><ul className="custom-list"><li>User Reports</li></ul></Link> },
+              { label:<Link to="/Booking-Reports"><ul className="custom-list"><li>Booking Reports</li></ul></Link> },
+              { label:<Link to="/Parking-Reports"><ul className="custom-list"><li>Parking Reports</li></ul></Link> },
+              { label:<Link to="/Transaction-Reports"><ul className="custom-list"><li>Transaction Reports</li></ul></Link> }],
             },
             {
               key: "7",
@@ -246,7 +252,10 @@ const DashUI = () => {
             <Route path="/profile" element={<Content2 />} />
             <Route path="/user" element={<Content3 />} />
             <Route path="/vendor" element={<VendorContent />} />
-            <Route path="/report" element={<Content3 />} />
+            {/* <Route path="/report" element={<ReportContainer />} /> */}
+            <Route path="/User-Reports" element={<ReportContainer />} />
+            <Route path="/Booking-Reports" element={<BookingReport />} />
+            <Route path="/Parking-Reports" element={<ParkingReport />} />
             <Route path="/parking-management" element={<Content4 />} />
             <Route path="/parking-list" element={<Content />} />
             <Route path="/parking-bookings" element={<Content />} />

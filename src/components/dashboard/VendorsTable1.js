@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Table,  Switch } from 'antd';
 // import ".././App.css"
-import { Pagination } from 'antd';
-import CustomPagination from '.././dashboard/CustomPagination';
-import { style } from 'd3';
+// import { Pagination } from 'antd';
+// import CustomPagination from '.././dashboard/CustomPagination';
+// import { style } from 'd3';
 import tableimage1 from "../../images/tableimage1.png"
 
 const VendorsTable1 = () => {
