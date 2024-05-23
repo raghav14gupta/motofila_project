@@ -33,7 +33,7 @@ const Content2 = () => {
               padding: "20px",
               position:"relative"
             }}>
-              <legend style={{ color: "rgba(255, 255, 255, 1)", width: "10vw", padding: "1% 3%", fontSize: "1vw", backgroundColor: "rgba(53, 65, 91, 1)", borderRadius: "5px", position:"absolute",top:"-1vw" }}>Profile Details</legend>
+              <legend style={{ color: "rgba(255, 255, 255, 1)", width: "11vw", padding: "1% 3%", fontSize: "1vw", backgroundColor: "rgba(53, 65, 91, 1)", borderRadius: "5px", position:"absolute",top:"-1vw" }}>Profile Details</legend>
 
               <div className='profile-detail-name'>
                 <label htmlFor="name">Name</label>

@@ -33,6 +33,7 @@ import Content from "./Content";
 import Content2 from "./Contenttwo";
 import Content3 from "../dashboard/Content3";
 import Content4 from "./Content4";
+import VendorContent from "./VendorContent";
 
 const { Header, Sider, Content: AntContent } = Layout;
 
@@ -94,41 +95,46 @@ const DashUI = () => {
             },
             {
               key: "3",
+              icon: <img src={vendor} alt="vendor" />,
+              label: <Link to="/profile">Profile</Link>,
+            },
+            {
+              key: "4",
               icon: <img src={user} alt="user" />,
               label: <Link to="/user">User</Link>,
             },
             {
-              key: "4",
+              key: "5",
               icon: <img src={vendor} alt="vendor" />,
               label: <Link to="/vendor">Vendor</Link>,
             },
             {
-              key: "5",
+              key: "6",
               icon: <img src={report} alt="report" />,
               label: <Link to="/report">Report</Link>,
               children: [{ label: "option1" }],
             },
             {
-              key: "6",
+              key: "7",
               label: <Link to="/parking-management">Parking Management</Link>,
             },
             {
-              key: "7",
+              key: "8",
               icon: <img src={plist} alt="plist" />,
               label: <Link to="/parking-list">Parking List</Link>,
             },
             {
-              key: "8",
+              key: "9",
               icon: <img src={pbooking} alt="pbooking" />,
               label: <Link to="/parking-bookings">Parking Bookings</Link>,
             },
             {
-              key: "9",
+              key: "10",
               icon: <img src={pfacility} alt="pfacility" />,
               label: <Link to="/parking-facilities">Parking Facilities</Link>,
             },
             {
-              key: "10",
+              key: "11",
               icon: <img src={psetting} alt="psetting" />,
               label: <Link to="/vehicle-settings">Vehicle Settings</Link>,
               children: [{
@@ -137,22 +143,22 @@ const DashUI = () => {
               }],
             },
             {
-              key: "11",
+              key: "12",
               label: <Link to="/setting-management">Setting Management</Link>,
             },
             {
-              key: "12",
+              key: "13",
               icon: <img src={payment} alt="payment" />,
               label: <Link to="/payments">Payments</Link>,
               children: [{ label: "option1" }],
             },
             {
-              key: "13",
+              key: "14",
               icon: <img src={authority} alt="authority" />,
               label: <Link to="/authorities">Authorities</Link>,
             },
             {
-              key: "14",
+              key: "15",
               icon: <img src={setting} alt="setting" />,
               label: (
                 <Link to="/settings">
@@ -235,10 +241,11 @@ const DashUI = () => {
           }}
         >
           <Routes>
-            <Route path="/" element={<Content3 />} />
+            <Route path="/" element={<Content />} />
             <Route path="/account-management" element={<Content2 />} />
+            <Route path="/profile" element={<Content2 />} />
             <Route path="/user" element={<Content3 />} />
-            <Route path="/vendor" element={<Content />} />
+            <Route path="/vendor" element={<VendorContent />} />
             <Route path="/report" element={<Content3 />} />
             <Route path="/parking-management" element={<Content4 />} />
             <Route path="/parking-list" element={<Content />} />

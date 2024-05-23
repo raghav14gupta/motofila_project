@@ -519,6 +519,7 @@ padding-left: 25px !important;
 .tabletext{
   font-family:"Poppins" ;
   font-weight: 400;
+  text-align: center;
 }
 
 a,
@@ -801,5 +802,25 @@ a:visited {
   border-radius: none;
 }
 .custom-table th{
+  border-radius: 0px !important;
+}
+
+
+/* vendor */
+.userMainContainer_first-search img {
+  position: absolute;
+  left: 80%;
+  top: 7%;
+  right: 20%;
+  width: 3vw;
+}
+.bg-primary{
+  background-color: rgba(240, 126, 1, 1) !important;
+  font-weight: 400 !important;
+}
+
+:where(.css-dev-only-do-not-override-1okl62o).ant-table-wrapper .ant-table-cell, :where(.css-dev-only-do-not-override-1okl62o).ant-table-wrapper .ant-table-thead>tr>th, :where(.css-dev-only-do-not-override-1okl62o).ant-table-wrapper .ant-table-tbody>tr>th, :where(.css-dev-only-do-not-override-1okl62o).ant-table-wrapper .ant-table-tbody>tr>td, :where(.css-dev-only-do-not-override-1okl62o).ant-table-wrapper tfoot>tr>th, :where(.css-dev-only-do-not-override-1okl62o).ant-table-wrapper tfoot>tr>td {
+  
+  text-align: center;
   border-radius: 0px !important;
 }

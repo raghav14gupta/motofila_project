@@ -1,30 +1,14 @@
-import { theme } from "antd";
 import React from "react";
-import { Table, Button } from 'antd';
-import Table1 from "../Table1";
-import CustomPagination from "./CustomPagination";
 import searchicon from "../../images/searchicon.png"
+import VendorsTable1 from "./VendorsTable1";
+import tableimage1 from "../../images/tableimage1.png"
+import CustomPagination from "./CustomPagination";
+import VendorTable2 from "./VendorTable2";
 
-
-
-
-const Content3 = () => {
-  const {
-    token: { colorBgContainer, borderRadiusLG },
-  } = theme.useToken();
-  
+const VendorContent = () => {
   return (
     <>
-      <content
-        style={{
-          margin: "5px 6px",
-          padding: 9,
-          minHeight: 280,
-          background: colorBgContainer,
-          borderRadius: borderRadiusLG,
-          overflowY: "auto",
-        }}
-      >
+      <div className="vendors_wrapper">
         <div className="toptext">
           <p
             style={{
@@ -36,14 +20,11 @@ const Content3 = () => {
               color: "rgba(0, 0, 0, 1)",
             }}
           >
-            User
+            Vendors
           </p>
         </div>
 
-        <div className="userMainContainer">
-
-        
- <div className="userMainContainer_first">
+        <div className="userMainContainer_first">
           <div className="userMainContainer_first-entries">
             <span style={{display:"flex",gap:"1vw",fontSize:"1vw"}}>
              <span>Show</span>
@@ -52,24 +33,30 @@ const Content3 = () => {
 
             </span>
           </div>
+          <div>
+          <span class="badge bg-primary" style={{padding:"1vw",backgroundColor:"rgba(240, 126, 1, 1) !important;"}}>+ Add Parking Prices</span>
+          </div>
           <div className="userMainContainer_first-search">
           <input type="text" placeholder="Search" style={{padding:"0.7vw",width:"18vw",height:"3vw"}}></input>
           <img src={searchicon} />
           </div>
         </div>
-         <div className="userMainContainer_Second">
-         <Table1 />
-         </div>
 
-         <div className="userMainContainer_third">
+        <div>
+            {/* <VendorsTable1 /> */}
+            <VendorTable2 />
+        </div>
+
+        <div>
+        <div className="userMainContainer_third">
          <p style={{textAlign:"left",fontSize:"1vw"}}>Showing 1 to 3 of 3 entries</p>
          <CustomPagination className="firstPagination"/>
          </div>
-
         </div>
-      </content>
+
+      </div>
     </>
   );
 };
 
-export default Content3;
+export default VendorContent;
