@@ -21,7 +21,7 @@ const Barchart = () => {
   const svgRef = useRef();
 
   useEffect(() => {
-    const margin = { top: 10, right: 80, bottom: 30, left: 70 };
+    const margin = { top: 10, right: 80, bottom: 30, left: 40 };
     const width = 1000 - margin.left - margin.right; // Increased width
     const height = 500 - margin.top - margin.bottom; // Increased height
 

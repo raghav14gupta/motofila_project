@@ -11,6 +11,7 @@ import downloadicon from "../../images/downloadicon.png";
       } = theme.useToken();
   return (
     <>
+         <div style={{padding:"3vw"}}>
          <content
           style={{
             margin: "24px 16px",
@@ -80,8 +81,11 @@ import downloadicon from "../../images/downloadicon.png";
             }
           </div>
 
-          <Barchart />
+         <div style={{marginRight:"5vw"}}>
+         <Barchart />
+         </div>
         </content>
+         </div>
     </>
   )
 }

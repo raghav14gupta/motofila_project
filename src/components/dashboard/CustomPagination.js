@@ -12,6 +12,6 @@ const itemRender = (_, type, originalElement) => {
 };
 
 const CustomPagination = ({ className, style }) => (
-  <Pagination total={30} itemRender={itemRender} className={className} style={style} />
+  <Pagination total={25} itemRender={itemRender} className={className} style={style} />
 );
 export default CustomPagination;

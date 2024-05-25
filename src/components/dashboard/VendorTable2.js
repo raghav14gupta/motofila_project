@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import { Table,  Switch } from 'antd';
-import ".././App.css"
-import { Pagination } from 'antd';
-import CustomPagination from './dashboard/CustomPagination';
-import { style } from 'd3';
-import tableimage1 from "../images/tableimage1.png"
-// import tableimage1 from "../../images/tableimage1.png";
+// import ".././App.css"
+// import { Pagination } from 'antd';
+// import CustomPagination from '.././dashboard/CustomPagination';
+// import { style } from 'd3';
+import tableimage1 from "../../images/tableimage1.png"
 
-
-const Table1 = () => {
-  const [selectedRowKeys, setSelectedRowKeys] = useState([]); // State for selected row keys
+const VendorsTable2 = () => {
+    const [selectedRowKeys, setSelectedRowKeys] = useState([]); // State for selected row keys
   const [loading, setLoading] = useState(false); // State for loading indicator
 
   // Function to start loading and simulate async operation
@@ -40,65 +38,53 @@ const Table1 = () => {
   // Define columns and data
   const columns = [
     {
-      title: 'All',
+      title: 'SI No.',
       className: 'tabletext',
-      dataIndex: 'all',
+      dataIndex: 'sino',
     },
     {
-      title: 'Image',
+      title: 'Parking Name',
       className: 'headTitle',
-      dataIndex: 'image',
-      render: () => <img src={tableimage1} alt="img" className="table-image" />,
+      dataIndex: 'pname',
+    //   render: () => <img src={tableimage1} alt="img" className="table-image" />,
     },
     {
-      title: 'Name',
+      title: 'Vendor Name',
       className: 'tabletext',
-      dataIndex: 'name',
+      dataIndex: 'vname',
     },
     {
-      title: 'Email',
+      title: 'Vehicle',
       className: 'tabletext',
-      dataIndex: 'email',
+      dataIndex: 'vehicle',
     },
     {
-      title: 'Phone',
+      title: 'Price',
       className: 'tabletext',
-      dataIndex: 'phone',
+      dataIndex: 'price',
     },
-    {
-      title: 'Date',
-      className: 'tabletext',
-      dataIndex: 'date',
-    },
-    {
-      title: 'Active',
-      dataIndex: 'active',
-      render: () => <Switch defaultChecked />,
-    },
-    {
-      title: 'Total Bookings',
-      dataIndex: 'totalbookings',
-      className: 'totalbookingText tabletext',
-    },
+   
+    
   ];
 
   // Generate sample data
   const data = [];
-  for (let i = 1; i <= 7; i++) {
+  for (let i = 1; i <= 5; i++) {
     data.push({
       key: i,
-      all: `${i}`,
-      name: `Raghav Gupta ${i}`,
-      email: 'demo@gmail.com',
-      phone: `1234567899 ${i}`,
-      date: '16/05/2024',
-      active: <Switch defaultChecked />,
-      totalbookings: '5',
+      sino: `${i}`,
+      pname: `Johnsen parking`,
+      vname: 'Shubam jena',
+      vehicle: `2 wheelers`,
+      price: 'RS. 50/-',
+    //   active: <Switch defaultChecked />,
+    //   totalbookings: '5',
     });
   }
 
   return (
-    <div className="table-container">
+    <>
+ <div className="table-container">
       <div style={{ marginBottom: '1rem' }}>
         <span style={{ marginLeft: '0.5rem' }}>
           {hasSelected ? `Selected ${selectedRowKeys.length} items` : ''}
@@ -106,7 +92,7 @@ const Table1 = () => {
       </div>
       <div className="table-wrapper">
         <Table
-          rowSelection={rowSelection}
+        //   rowSelection={rowSelection}  //checkbox will be removed from column
           columns={columns}
           dataSource={data}
           pagination={false}
@@ -114,6 +100,8 @@ const Table1 = () => {
         />
       </div>
     </div>
-  );
-};
-export default Table1;
+    </>
+  )
+}
+
+export default VendorsTable2;

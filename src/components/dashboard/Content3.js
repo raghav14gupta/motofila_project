@@ -53,7 +53,7 @@ const Content3 = () => {
             </span>
           </div>
           <div className="userMainContainer_first-search">
-          <input type="text" placeholder="Search" style={{padding:"0.7vw",width:"18vw",height:"2vw"}}></input>
+          <input type="text" placeholder="Search" style={{padding:"0.7vw",width:"18vw",height:"3vw"}}></input>
           <img src={searchicon} />
           </div>
         </div>

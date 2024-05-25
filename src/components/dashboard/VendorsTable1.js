@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import { Table,  Switch } from 'antd';
-import ".././App.css"
-import { Pagination } from 'antd';
-import CustomPagination from './dashboard/CustomPagination';
-import { style } from 'd3';
-import tableimage1 from "../images/tableimage1.png"
-// import tableimage1 from "../../images/tableimage1.png";
+// import ".././App.css"
+// import { Pagination } from 'antd';
+// import CustomPagination from '.././dashboard/CustomPagination';
+// import { style } from 'd3';
+import tableimage1 from "../../images/tableimage1.png"
 
-
-const Table1 = () => {
-  const [selectedRowKeys, setSelectedRowKeys] = useState([]); // State for selected row keys
+const VendorsTable1 = () => {
+    const [selectedRowKeys, setSelectedRowKeys] = useState([]); // State for selected row keys
   const [loading, setLoading] = useState(false); // State for loading indicator
 
   // Function to start loading and simulate async operation
@@ -40,9 +38,9 @@ const Table1 = () => {
   // Define columns and data
   const columns = [
     {
-      title: 'All',
+      title: 'SI No.',
       className: 'tabletext',
-      dataIndex: 'all',
+      dataIndex: 'sino',
     },
     {
       title: 'Image',
@@ -56,9 +54,9 @@ const Table1 = () => {
       dataIndex: 'name',
     },
     {
-      title: 'Email',
+      title: 'Doj',
       className: 'tabletext',
-      dataIndex: 'email',
+      dataIndex: 'doj',
     },
     {
       title: 'Phone',
@@ -66,39 +64,36 @@ const Table1 = () => {
       dataIndex: 'phone',
     },
     {
-      title: 'Date',
+      title: 'Aadhar No',
       className: 'tabletext',
-      dataIndex: 'date',
+      dataIndex: 'adhaar',
     },
     {
-      title: 'Active',
-      dataIndex: 'active',
+      title: 'Approval',
+      dataIndex: 'approval',
       render: () => <Switch defaultChecked />,
     },
-    {
-      title: 'Total Bookings',
-      dataIndex: 'totalbookings',
-      className: 'totalbookingText tabletext',
-    },
+    
   ];
 
   // Generate sample data
   const data = [];
-  for (let i = 1; i <= 7; i++) {
+  for (let i = 1; i <= 5; i++) {
     data.push({
       key: i,
-      all: `${i}`,
+      sino: `${i}`,
       name: `Raghav Gupta ${i}`,
-      email: 'demo@gmail.com',
+      doj: 'Sunday,19 Feb 2024',
       phone: `1234567899 ${i}`,
-      date: '16/05/2024',
+      adhaar: '9876-5432-1023',
       active: <Switch defaultChecked />,
       totalbookings: '5',
     });
   }
 
   return (
-    <div className="table-container">
+    <>
+ <div className="table-container">
       <div style={{ marginBottom: '1rem' }}>
         <span style={{ marginLeft: '0.5rem' }}>
           {hasSelected ? `Selected ${selectedRowKeys.length} items` : ''}
@@ -106,7 +101,7 @@ const Table1 = () => {
       </div>
       <div className="table-wrapper">
         <Table
-          rowSelection={rowSelection}
+        //   rowSelection={rowSelection}  //checkbox will be removed from column
           columns={columns}
           dataSource={data}
           pagination={false}
@@ -114,6 +109,8 @@ const Table1 = () => {
         />
       </div>
     </div>
-  );
-};
-export default Table1;
+    </>
+  )
+}
+
+export default VendorsTable1
