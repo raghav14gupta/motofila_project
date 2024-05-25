@@ -37,6 +37,13 @@ import VendorContent from "./VendorContent";
 import { ReportContainer } from "./ReportContainer";
 import BookingReport from "./BookingReport";
 import ParkingReport from "./ParkingReport";
+import TransactionReports from "./TransactionReports";
+import ParkingList from "./ParkingList";
+import ParkingBookings from "./ParkingBookings";
+import UsersTable2 from "./UsersTable2";
+import ParkingFacilities from "./ParkingFacilities";
+import VehicleBrands from "./VehicleBrands";
+import VehicleModels from "./VehicleModels";
 
 const { Header, Sider, Content: AntContent } = Layout;
 
@@ -143,10 +150,10 @@ const DashUI = () => {
               key: "11",
               icon: <img src={psetting} alt="psetting" />,
               label: <Link to="/vehicle-settings">Vehicle Settings</Link>,
-              children: [{
-                label: "option1",
-                style: { backgroundColor: "rgba(53, 65, 91, 1)" }
-              }],
+              children: [{ label:<Link to="/Vehicle-Brands"><ul className="custom-list"><li>Brands</li></ul></Link> },
+              { label:<Link to="/Vehicle-Models"><ul className="custom-list"><li>Models</li></ul></Link> },
+              
+             ],
             },
             {
               key: "12",
@@ -250,21 +257,25 @@ const DashUI = () => {
             <Route path="/" element={<Content />} />
             <Route path="/account-management" element={<Content2 />} />
             <Route path="/profile" element={<Content2 />} />
-            <Route path="/user" element={<Content3 />} />
+            <Route path="/user" element={<Content3/>} />
             <Route path="/vendor" element={<VendorContent />} />
             {/* <Route path="/report" element={<ReportContainer />} /> */}
             <Route path="/User-Reports" element={<ReportContainer />} />
             <Route path="/Booking-Reports" element={<BookingReport />} />
             <Route path="/Parking-Reports" element={<ParkingReport />} />
+            <Route path="/Transaction-Reports" element={<TransactionReports />} />
             <Route path="/parking-management" element={<Content4 />} />
-            <Route path="/parking-list" element={<Content />} />
-            <Route path="/parking-bookings" element={<Content />} />
-            <Route path="/parking-facilities" element={<Content />} />
-            <Route path="/vehicle-settings" element={<Content />} />
+            <Route path="/parking-list" element={<ParkingList />} />
+            <Route path="/parking-bookings" element={<ParkingBookings />} />
+            
+            <Route path="/parking-facilities" element={<ParkingFacilities />} />
+            <Route path="/vehicle-Brands" element={<VehicleBrands />} />
+            <Route path="vehicle-Models" element={<VehicleModels />} />
             <Route path="/setting-management" element={<Content />} />
             <Route path="/payments" element={<Content />} />
             <Route path="/authorities" element={<Content />} />
-            <Route path="/settings" element={<Content />} />
+            <Route path="/settings" element={<Content />} /> 
+            
           </Routes>
         </AntContent>
       </Layout>

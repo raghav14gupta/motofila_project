@@ -881,6 +881,46 @@ a:visited {
   font-weight: 400;
 }
 
-/* .ant-layout-content{
-  padding: 0px !important;
-} */
+.ant-layout-content{
+  padding: 6px !important;
+}
+
+/* parking */
+.ParkingList-buttons{
+  display: flex;
+  justify-content: center;
+  gap: 1vw;
+}
+
+.ParkingList-buttons .badge {
+  margin: 0px !important;
+  padding: 1vw !important;
+}
+
+.ParkingList-buttons .bg-secondary{
+  height: 3vw;
+  padding: 0.6vw !important;
+}
+
+/* parking booking */
+
+.ParkingBooking-buttons{
+  display: flex;
+  justify-content: center;
+  gap: 1vw;
+}
+
+.ParkingBooking-buttons .bg-secondary{
+  height: 3vw;
+  padding: 0.6vw !important;
+}
+
+.badge-success {
+  background-color: green;
+  color: white;
+}
+
+.badge-danger {
+  background-color: red;
+  color: white;
+}
