@@ -44,6 +44,11 @@ import UsersTable2 from "./UsersTable2";
 import ParkingFacilities from "./ParkingFacilities";
 import VehicleBrands from "./VehicleBrands";
 import VehicleModels from "./VehicleModels";
+import ParkingBookingReports from "./ParkingBookingReports";
+import PaymentParkingReport from "./PaymentParkingReport";
+import GlobalSettings from "./GlobalSettings";
+import AdminCommission from "./AdminCommission";
+import PaymentMethod from "./PaymentMethod";
 
 const { Header, Sider, Content: AntContent } = Layout;
 
@@ -163,7 +168,9 @@ const DashUI = () => {
               key: "13",
               icon: <img src={payment} alt="payment" />,
               label: <Link to="/payments">Payments</Link>,
-              children: [{ label: "option1" }],
+              children: [{ label:<Link to="/Parking-Report"><ul className="custom-list"><li>Parking Report</li></ul></Link> },
+              { label:<Link to="/Booking-Report"><ul className="custom-list"><li>Booking Report</li></ul></Link> },
+              ],
             },
             {
               key: "14",
@@ -178,12 +185,13 @@ const DashUI = () => {
                   Settings
                 </Link>
               ),
-              children: [{
-                key: "14",
-                label: "option1",
-                className: collapsed ? "collapsed-settings" : "expanded-settings",
-                style: { backgroundColor: "rgba(53, 65, 91, 1)" }
-              }]
+              children: [{ label:<Link to="/Global-Settings"><ul className="custom-list"><li>Global Settings</li></ul></Link> },
+              { label:<Link to="/Admin-Commission"><ul className="custom-list"><li>Admin Commission</li></ul></Link> },
+              { label:<Link to="/Payment-Method"><ul className="custom-list"><li>Payment Method</li></ul></Link> },
+              { label:<Link to="/Admin-Commission"><ul className="custom-list"><li>Admin Commission</li></ul></Link> },
+              { label:<Link to="/Admin-Commission"><ul className="custom-list"><li>Admin Commission</li></ul></Link> },
+              
+              ],
             },
           ]}
         />
@@ -272,9 +280,14 @@ const DashUI = () => {
             <Route path="/vehicle-Brands" element={<VehicleBrands />} />
             <Route path="vehicle-Models" element={<VehicleModels />} />
             <Route path="/setting-management" element={<Content />} />
-            <Route path="/payments" element={<Content />} />
+            {/* <Route path="/payments" element={<Content />} /> */}
+            <Route path="/Parking-Report" element={<PaymentParkingReport />} />
+            <Route path="/Booking-Report" element={<ParkingBookingReports />} />
             <Route path="/authorities" element={<Content />} />
-            <Route path="/settings" element={<Content />} /> 
+            {/* <Route path="/settings" element={<Content />} />  */}
+            <Route path="/Global-Settings" element={<GlobalSettings />} />
+            <Route path="/Admin-Commission" element={<AdminCommission />} />
+            <Route path="/Payment-Method" element={<PaymentMethod />} />
             
           </Routes>
         </AntContent>
