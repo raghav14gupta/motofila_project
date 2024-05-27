@@ -8,7 +8,7 @@ import VendorTable2 from "./VendorTable2";
 const VendorContent = () => {
   return (
     <>
-      <div className="vendors_wrapper">
+      <div className="vendors_wrapper" style={{padding:"4vw"}}>
         <div className="toptext">
           <p
             style={{
